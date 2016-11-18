@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block main %}
+{% if projects %}
+<table>
+	<tr>
+		<th>Nombre</th>
+		<th>Descripción</th>
+		<th>Versión</th>
+		<th>Página web</th>
+	</tr>
+	{% for p in projects %}
+	<tr>
+		<td><a href="{% url 'project-info', p %}">{{ p.name }}</a></td>
+		<td>{{ p.description }}</td>
+		<td>{{ p.version }}</td>
+		<td>{{ p.website | urlify | default('n/a', true) }}</td>
+	</tr>
+	{% endfor %}
+</table>
+{% else %}
+<p>No hay proyectos</p>
+{% endif %}
+{% endblock %}

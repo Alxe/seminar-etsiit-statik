@@ -1,0 +1,7 @@
+# data/Project/slides-statik.yml
+name: "Slides of Statik"
+description: "Slides for a Statik presentation with reveal.js"
+owner: "Alejandro Núñez Pérez" # If a custom model, put id/pk
+website: "http://alxe.github.io/seminar-etsiit-statik"
+version: 1
+active: true

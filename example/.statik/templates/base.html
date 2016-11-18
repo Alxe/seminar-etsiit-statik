@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+	<title>
+		Mi página de ejemplo
+	</title>
+
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="{% asset 'css/style.css' %}" />
+</head>
+<body>
+	<header>
+		<h1>{{ section_title }}</h1>
+	</header>
+
+	<hr />
+
+	<main>
+	{% block main %}{% endblock %}
+	</main>
+</body>
+</html>

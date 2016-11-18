@@ -1,0 +1,6 @@
+# views/index.yml
+path: /
+template: index
+context:
+  static:
+    section-title: Índice
