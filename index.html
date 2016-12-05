@@ -402,7 +402,7 @@ def urlify(path):
 					</section>
 				</section>
 
-				<section>
+				<section id="wrapping-up">
 					<h2>Resultados</h2>
 					<p class="fragment">Con estos ejemplos, y poco no mostrado, obtenemos la estructura de la página estática de ejemplo mostrada al inicio</p>
 					<p class="fragment">Con <em>Statik</em> (o cualquier otro <em>framework</em>), ampliar nuestra página web es muy sencillo y rápido, gracias a plantillas y modelos</p>
@@ -410,12 +410,11 @@ def urlify(path):
 				</section>
 
 				<section>
-					<section>
+					<section id="any-question">
 						<h1>¿Preguntas?</h1>
-						<h2 class="fragment">¡Dispara!</h2>
 					</section>
 
-					<section>
+					<section id="about-me">
 						<h2>Sobre mi</h2>
 						<div class="fragment">
 							<p>Alejandro Núñez Pérez</p>
@@ -433,6 +432,13 @@ def urlify(path):
 		<script>
 			Reveal.initialize({
 				history: true,
+
+				keyboard: {
+					9	: null,
+					38	: 'prev',
+					40	: 'next'
+
+				},
 
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
