@@ -35,6 +35,11 @@
 		.reveal > .slides > section tr.mark {
 			color: #111;
 			background-color: #ff4;
+			
+		}
+
+		.reveal > .slides > section p::first-letter {
+
 		}
 		</style>
 
@@ -57,13 +62,23 @@
 				<section>
 					<section id="introduction">
 						<h2>¿Qué es una página web estática?</h2>
-						<p class="fragment">Es una página web que se muestra exáctamente como se almacena, sin distinción de usuarios ni datos de entrada</p>
-						<p class="fragment">Por lo tanto, no depende de aplicaciones web (con <em>PHP</em>, por ejemplo) o bases de datos (como <em>MySQL</em>)</p>
-						<p class="fragment">Es apropiada para páginas web que no vamos a editar a menudo, o que son puramente informativas</p>
+						<p>Es una página web que se muestra exáctamente como se almacena, sin distinción de usuarios ni datos de entrada</p>
+						<p>Por lo tanto, no depende de aplicaciones web (con <em>PHP</em>, por ejemplo) o bases de datos (como <em>MySQL</em>)</p>
+						<p>Es apropiada para páginas web que no vamos a editar a menudo, o que son puramente informativas</p>
+					</section>
+
+					<section id="benefits">
+						<h2>Beneficios</h2>
+						<ul>
+							<li>Menor carga de recursos en el servidor</li>
+							<li>Mayor seguridad al no tener entrada de datos</li>
+							<li>Más estabilidad (al desarrollar) a la hora construir sitios web duraderos</li>
+						</ul>
 					</section>
 
 					<section id="introduction-example">
 						<h2>Posible estructura</h2>
+						<p>Este ejemplo usa <em>Pretty URLs</em>, es decir, evita el uso de archivos directamente, basándose en directorios</p>
 						<pre><code class="nohighlight" data-trim data-noescape>
 example
 ├── about
@@ -83,22 +98,21 @@ example
 │   └── index.html
 └── index.html
 						</code></pre>
-						<p class="fragment">Este ejemplo usa <em>Pretty URLs</em>, es decir, evita el archivos directamente y se basa en directorios</p>
 					</section>
 				</section>
 
 				<section>
 					<section id="how-to">
 						<h2>¿Cómo construir una?</h2>
-						<p class="fragment">La forma más fácil y directa es construir los archivos HTML que representan a cada sección a mano</p>
-						<p class="fragment">Esto al principio puede ser simple, pero rápidamente alcanza una alta complejidad</p>
-						<p class="fragment">Cuando esto ocurre, es mejor recurrir a un <em>framework</em> que nos facilite el trabajo</p>
+						<p>La forma más fácil y directa es construir los archivos HTML que representan a cada sección a mano</p>
+						<p>Esto al principio puede ser simple, pero rápidamente alcanza una alta complejidad</p>
+						<p>Cuando esto ocurre, es mejor recurrir a un <em>framework</em> que nos facilite el trabajo</p>
 					</section>
 
 					<section id="frameworks">
 						<h2><em>Frameworks</em></h2>
-						<p class="fragment">Un framework puede automatizar muchos procesos, al igual que simplica una estructura. Ejemplos son&hellip;</p>
-						<div class="fragment">
+						<p>Un framework puede automatizar muchos procesos, al igual que simplica una estructura. Ejemplos son&hellip;</p>
+						<div>
 							<table>
 							<thead>
 								<tr>
@@ -144,131 +158,36 @@ example
 							<p><small>[1]: A fecha de la realización de las diapositivas</small></p>
 						</div>
 					</section>
-
-					<section id="why-statik">
-						<h2>¿Por qué <em>Statik</em>?</h2>
-						<p class="fragment">Está escrito en Python, un lenguaje simple de uso general, por lo que facilita la ampliación en el caso de que sea necesario</p>
-						<p class="fragment">Usa plantillas <a href="http://jinja.pocoo.org/">Jinja2</a>, que facilita mucho la construcción de archivos <em>HTML</em>, ya que permiten herencia y bloques de contenido</p>
-						<p class="fragment">Permite definir modelos de datos personalizados, mientras que otros están más especializados en blogs de carácter estático</p>
-						<p class="fragment">Es relativamente desconocido y jóven, lo que es interesante a la hora de contribuir</p>
-					</section>
-				</section>
-
-				<section id="prerequisites">
-					<h2>Prerequisitos</h2>
-					<p class="fragment">De ahora en adelante, se asume que se dispone de lo siguiente:</p>
-					<ul class="fragment">
-						<li>Framework <a href="https://getstatik.com"><em>Statik</em></a></li>
-						<li>Herramienta <a href="https://git-scm.com/"><code>git</code></a></li>
-						<li>Cuenta en <a href="https://github.com"><em>GitHub</em></a></li>
-					</ul>
 				</section>
 
 				<section>
-					<section id="getting-started">
-						<h2>Para empezar&hellip;</h2>
-						<p class="fragment">Necesitamos un repositorio en <em>GitHub</em> donde publicaremos nuestra página web</p>
-						<p class="fragment">En este caso, se tomará un repositorio especial:<br /><code><em>&lt;username&gt;</em>.github.io</code></p>
-						<p class="fragment">Este repositorio da lugar a una página web personal:<br /><code>http(s)://<em>&lt;username&gt;</em>.github.io/</code></p>
+					<section id="why-statik">
+						<h2>¿Por qué <em>Statik</em>?</h2>
+						<p>Python es fácil de usar y facilita la ampliación del framework</p>
+						<p><a href="http://jinja.pocoo.org/">Jinja2</a> facilita mucho la construcción de archivos <em>HTML</em> al  permitir lógica (bucles, condicionales), herencia&hellip;</p>
+						<p>Permite definir modelos de datos propios, mientras que otros frameworks están más especializados en blogs</p>
 					</section>
 
 					<section id="setting-groundwork">
-						<h2>Una vez clonado el repositorio&hellip;</h2>
-						<p class="fragment">Creamos la estructura básica de <em>Statik</em>:<br /><code>cd <em>&lt;path&gt;</em> &amp;&amp; statik --quickstart</code></p>
-						<P class="fragment">Después de esto, tendremos todo lo básico para empezar a trabajar con nuestra página web</p>
+						<h2>Para empezar&hellip;</h2>
+						<p>Creamos la estructura básica de <em>Statik</em>:<br /><code>cd <em>&lt;path&gt;</em> &amp;&amp; statik --quickstart</code></p>
+						<p>Con esto tendremos todo lo básico para empezar a trabajar con Statik</p>
 					</section>
 				</section>
 
-				<section>
-					<section id="statik-summary">
-						<h2>Introducción a <em>Statik</em></h2>
-						<p class="fragment"><em>Statik</em> sirve para generar un conjunto de archivos <em>HTML</em>, tu página web</p>
-						<p class="fragment">Para ello, usa Modelos y Vistas, similar a las del patrón <em>MVC</em></p>
-						<p class="fragment">Con <code>statik --watch</code> podremos visualizar los cambios a medida que se realizan modificaciones</p>
-					</section>
-
-					<section id="statik-hierarchy-general">
-						<h2>Estructura del proyecto (general)</h2>
-						<table class="fragment">
-						<thead>
-							<tr>
-								<th>Archivo/Directorio</th>
-								<th>Descripción</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><code>config.yml</code></td>
-								<td>Archivo de configuración global al proyecto</td>
-							</tr>
-							<tr>
-								<td><code>assets/</code></td>
-								<td>Archivos estáticos como imágenes, CSS&hellip;</td>
-							</tr>
-						</tbody>
-						</table>
-					</section>
-					<section id="statik-hierarchy-model">
-						<h2>Estructura del proyecto (modelos)</h2>
-						<table class="fragment">
-						<thead>
-							<tr>
-								<th>Archivo/Directorio</th>
-								<th>Descripción</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><code>models/</code></td>
-								<td>Archivos de los modelos</td>
-							</tr>
-							<tr>
-								<td><code>data/&lt;Model&gt;</code></td>
-								<td>Archivos de los datos correspondiente a cada modelo</td>
-							</tr>
-						</tbody>
-						</table>
-					</section>
-					<section id="statik-hierarchy-views">
-						<h2>Estructura del proyecto (vistas)</h2>
-						<table class="fragment">
-						<thead>
-							<tr>
-								<th>Archivo/Directorio</th>
-								<th>Descripción</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><code>views/</code></td>
-								<td>Archivos de las vistas</td>
-							</tr>
-							<tr>
-								<td><code>templates/</code></td>
-								<td>Archivos de plantillas de Jinja2</td>
-							</tr>
-							<tr>
-								<td><code>templatetags/</code></td>
-								<td>Archivos para extensiones de Jinja2</td>
-							</tr>
-						</tbody>
-						</table>
-					</section>
-				</section>
+				<section id="statik-summary">
+					<h2>Introducción a <em>Statik</em></h2>
+					<p><em>Statik</em> sirve para generar un conjunto de archivos <em>HTML</em>, tu página web</p>
+					<p>Para ello, usa Modelos y Vistas, similar a las del patrón <em>MVC</em></p>
+					<p>Con <code>statik --watch</code> podremos visualizar los cambios a medida que se realizan modificaciones</p>
+				</section>					
 
 				<section>
-					
 					<section id="statik-model">
 						<h2>Modelos</h2>
-						<p class="fragment">Estructura de los datos, los <em>tipos</em> que existen en nuestro proyecto</p>
-						<div class="fragment">
-							<hr />
-							<dl>
-								<dt><code>models/</code></dt><dd>Archivos YAML. Contienen el esqueleto de cada modelo, uno por archivo</dd>
-							</dl>
-							<hr />
-						</div>
-						<p class="fragment"><strong>Por ejemplo</strong>, el archivo <code>Project.yml</code> establece la estructura de los datos de tipo <code>Project</code></p>
+						<p>Estructura de los datos, los <em>tipos</em> que existen en nuestro proyecto</p>
+						<p>Se definen como archivos <em>YAML</em>. Estos especifican los campos de cada modelo, y de qué tipo son</p>
+						<p><strong>Por ejemplo</strong>, el archivo <code>Project.yml</code> establece la estructura de los datos de tipo <code>Project</code></p>
 					</section>
 
 					<section id="statik-model-example">
@@ -277,29 +196,20 @@ example
 # models/Project.yml
 name: String
 description: String
-owner: String # Could be a custom model, `Author`
+owner: String # Could be another model, `Author`
 website: String
 version: Integer
 active: Boolean
 						</code></pre>						
 					</section>
-
 				</section>
 
 				<section>
-					
 					<section id="statik-data">
 						<h2>Datos</h2>
-						<p class="fragment">Instancias de cada <em>tipo</em> definido por un modelo, con valores específicos</p>
-						<div class="fragment">
-							<hr />
-							<dl>
-								<dt><code>models/&lt;model&gt;/</code></dt>
-								<dd>Archivos YAML o Markdown híbrido. Definen cada valor del modelo. El nombre del archivo actúa de identificador</dd>
-							</dl>
-							<hr />
-						</div>
-						<p class="fragment"><strong>Por ejemplo</strong>, el archivo <code>Project/top_secret.yml</code> define los valores que toma una instancia con ID <code>top_secret</code> del modelo <code>Project</code></p>
+						<p>Objetos de cada modelo, datos de determinado <em>tipo</em> con valores específicos</p>
+						<p>También se definen como archivos <em>YAML</em>, u opcionalmente con <em>Markdown</em> y un preámbulo <em>YAML</em></p>
+						<p><strong>Por ejemplo</strong>, el archivo <code>Project/top_secret.yml</code> define los valores que toma una instancia con ID <code>top_secret</code> del modelo <code>Project</code></p>
 					</section>
 
 					<section id="statik-data-example">
@@ -308,24 +218,20 @@ active: Boolean
 # data/Project/top-secret.yml
 name: "My Top Secret Project"
 description: "It's a secret!"
-owner: "Alejandro Núñez Pérez" # If a custom model, put id/pk
+owner: "Alejandro Núñez Pérez" # If a custom model, id/pk goes here
 website: null
 version: 42
 active: true
 						</code></pre>
 					</section>
-
 				</section>
 
 				<section>
-
 					<section id="statik-view">
 						<h2>Vistas</h2>
-						<p class="fragment">Definición de cada sección de nuestro proyecto, como de sus datos. Es el nexo de unión de todos los componentes</p>
-						<dl class="fragment">
-							<dt><code>views/</code></dt><dd>Archivos YAML. Especifican en qué ruta se visualiza la vista, qué plantilla usa y cuál es su contexto</dd>
-						</dl>
-						<p class="fragment"><strong>Por ejemplo</strong>, el archivo <code>projects.yml</code> representa el índice de todos los proyectos</p>
+						<p>Secciones de nuestro proyecto. Es el nexo de unión de los componentes de plantillas y datos</p>
+						<p>Se escriben en <em>YAML</em> y dan contexto (datos) para que las plantillas usen</p>
+						<p><strong>Por ejemplo</strong>, el archivo <code>projects.yml</code> representa el índice de todos los proyectos</p>
 					</section>
 
 					<section id="statik-view-example">
@@ -336,23 +242,19 @@ path: "/projects/"
 template: "projects"
 context:
   static:
-    section-title: "Proyectos"
+    section-title: "Projects"
   dynamic:
     projects: session.query(Project).filter(Project.active).all()
 						</code></pre>
 					</section>
-
 				</section>
 
 				<section>
-
 					<section id="statik-templates">
 						<h2>Plantillas</h2>
-						<p class="fragment">Plantilla de Jinja2 usada para renderizar una vista</p>
-						<dl>
-							<div class="fragment"><dt><code>templates/</code></dt><dd>Archivos HTML (Jinja2). Contiene el formato que tendrá la página web</dd></div>
-						</dl>
-						<p class="fragment"><strong>Por ejemplo</strong>, el archivo <code>projects.html</code> contiene la plantilla Jinja2 que se renderizará acorde a la vista <code>projects.yml</code></p>
+						<p>Plantillas de Jinja2 usada para renderizar una vista, una sección</p>
+						<p>Están escritas como archivos HTML con la sintaxis de Jinja2, llámese expresiones (<code>{{ &hellip; }}</code>) y etiquetas (<code>{% &hellip; %}</code>)
+						<p><strong>Por ejemplo</strong>, el archivo <code>projects.html</code> contiene la plantilla Jinja2 que se renderizará acorde a la vista <code>projects.yml</code></p>
 					</section>
 
 					<section id="statik-templates-example">
@@ -380,11 +282,9 @@ context:
 				<section>
 					<section id="statik-templatetags">
 						<h2>Extensión de Plantillas</h2>
-						<p class="fragment">El motor Jinja2 se puede extender con <em>Python</em>, con mucha facilidad</p>
-						<dl>
-							<div class="fragment"><dt><code>templatetags/</code></dt><dd>Archivos python. Pueden contener funciones que actúen como filtros o etiquetas simples</dd></div>
-						</dl>
-						<p class="fragment"><strong>Por ejemplo</strong>, podemos crear el filtro <code>urlify</code>, que dado una ruta, cree un enlace a él</p>
+						<p>El motor Jinja2 se puede extender con <em>Python</em>, con mucha facilidad</p>
+						<p>Statik permite la creación de filtros (para expresiones) o etiquetas</p>
+						<p><strong>Por ejemplo</strong>, podemos crear el filtro <code>urlify</code>, que dado una ruta, cree un enlace a él</p>
 					</section>
 
 					<section id="statik-templatetags-example">
@@ -402,11 +302,87 @@ def urlify(path):
 					</section>
 				</section>
 
+				<section>
+					<section id="recompilation">
+						<h2>Recapitulando&hellip;</h2>
+					</section>
+
+					<section id="statik-hierarchy-general">
+						<h2>Estructura del proyecto (general)</h2>
+						<table>
+						<thead>
+							<tr>
+								<th>Archivo/Directorio</th>
+								<th>Descripción</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>config.yml</code></td>
+								<td>Archivo de configuración global al proyecto</td>
+							</tr>
+							<tr>
+								<td><code>assets/</code></td>
+								<td>Archivos estáticos como imágenes, CSS&hellip;</td>
+							</tr>
+						</tbody>
+						</table>
+					</section>
+					
+					<section id="statik-hierarchy-model">
+						<h2>Estructura del proyecto (modelos)</h2>
+						<table>
+						<thead>
+							<tr>
+								<th>Archivo/Directorio</th>
+								<th>Descripción</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>models/</code></td>
+								<td>Archivos de los modelos</td>
+							</tr>
+							<tr>
+								<td><code>data/&lt;Model&gt;</code></td>
+								<td>Archivos de los datos correspondiente a cada modelo</td>
+							</tr>
+						</tbody>
+						</table>
+					</section>
+					
+					<section id="statik-hierarchy-views">
+						<h2>Estructura del proyecto (vistas)</h2>
+						<table>
+						<thead>
+							<tr>
+								<th>Archivo/Directorio</th>
+								<th>Descripción</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>views/</code></td>
+								<td>Archivos de las vistas</td>
+							</tr>
+							<tr>
+								<td><code>templates/</code></td>
+								<td>Archivos de plantillas de Jinja2</td>
+							</tr>
+							<tr>
+								<td><code>templatetags/</code></td>
+								<td>Archivos para extensiones de Jinja2</td>
+							</tr>
+						</tbody>
+						</table>
+					</section>
+				</section>
+
 				<section id="wrapping-up">
 					<h2>Resultados</h2>
-					<p class="fragment">Con estos ejemplos, y poco no mostrado, obtenemos la estructura de la página estática de ejemplo mostrada al inicio</p>
-					<p class="fragment">Con <em>Statik</em> (o cualquier otro <em>framework</em>), ampliar nuestra página web es muy sencillo y rápido, gracias a plantillas y modelos</p>
-					<p class="fragment">Aunque el ejemplo es pobre, casos de usos más avanzados podrían ser blogs o portafolios, gracias al potente sistema de modelos</p>
+					<p>Con estos ejemplos, y poco no mostrado, obtenemos la estructura de la página estática de ejemplo mostrada al inicio</p>
+					<p>Con <em>Statik</em> (o cualquier otro <em>framework</em>), ampliar nuestra página web es muy sencillo y rápido, gracias a plantillas y modelos</p>
+					<p>Aunque el ejemplo es pobre, casos de usos más avanzados podrían ser blogs o portafolios, gracias al potente sistema de modelos</p>
 				</section>
 
 				<section>
@@ -416,10 +392,10 @@ def urlify(path):
 
 					<section id="about-me">
 						<h2>Sobre mi</h2>
-						<div class="fragment">
+						<div>
 							<p>Alejandro Núñez Pérez</p>
-							<p><a href="http://www.github.com/Alxe">Alxe@GitHub</a></p>
-							<p><a href="mailto:alxegod@gmail.com">alxegod@gmail.com</a></p>
+							<p><a href="https://github.com/Alxe">Yo en GitHub</a></p>
+							<p>Diapositivas <a href="https://github.com/Alxe/seminar-etsiit-statik/tree/gh-pages">hospedadas</a> en GitHub</p>
 						</div>
 					</section>
 				</section>
