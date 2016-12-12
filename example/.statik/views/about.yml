@@ -1,6 +1,6 @@
 # views/about.yml
-path: /about
-template: about
+path: "/about"
+template: "about"
 context:
   static:
-    section-title: Sobre mí
+    section-title: "About me"

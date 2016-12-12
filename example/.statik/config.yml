@@ -1,2 +1,5 @@
-project-name: Example Statik Project
-base-path: /
+project-name: "Example Statik Project"
+base-path: "/" # "https://alxe.github.io/seminar-etsiit-statik/example/"
+context:
+  static:
+    contact-email: "me@example.com"

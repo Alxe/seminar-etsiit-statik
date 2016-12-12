@@ -4,10 +4,10 @@
 {% if projects %}
 <table>
 	<tr>
-		<th>Nombre</th>
-		<th>Descripción</th>
-		<th>Versión</th>
-		<th>Página web</th>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Version</th>
+		<th>Webpage</th>
 	</tr>
 	{% for p in projects %}
 	<tr>
@@ -19,6 +19,6 @@
 	{% endfor %}
 </table>
 {% else %}
-<p>No hay proyectos</p>
+<p>No projects!</p>
 {% endif %}
 {% endblock %}

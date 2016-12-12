@@ -1,6 +1,6 @@
 # views/contact.yml
-path: /contact/
-template: contact
+path: "/contact/"
+template: "contact"
 context:
   static:
-    section-title: Contacto
+    section-title: "Contact"

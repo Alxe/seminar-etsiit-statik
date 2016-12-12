@@ -3,6 +3,6 @@ path: "/projects/"
 template: "projects"
 context:
   static:
-    section-title: "Proyectos"
+    section-title: "Projects"
   dynamic:
     projects: session.query(Project).filter(Project.active).all()
