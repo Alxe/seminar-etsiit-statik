@@ -1,0 +1,70 @@
+/* General styling */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: silver;
+}
+
+a {
+	color: teal;
+}
+
+a:hover {
+	text-decoration-style: wavy
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table tr {
+	border-bottom: 1px dashed black; 
+}
+
+/* Structural styling */
+
+body > header {
+	color: white;
+	background-color: black;
+	box-shadow: 3px 10px 4px black, -3px 10px 4px black;
+	border-bottom: 4px dotted teal;
+	margin-bottom: 0.5rem;
+}
+
+body > header > h1 {
+	padding: 1rem;
+	font-size: 3em;
+	font-family: serif;
+	text-decoration: underline;
+}
+
+body > header > nav {
+	padding: 0.5em 1em;
+	padding-top: 0;
+}
+
+body > header > nav > ul {
+	font-weight: bold;
+	list-style: none;
+}
+
+body > header > nav > ul > li {
+	display: inline;
+	padding-left: 1em;
+}
+
+body > header > nav > ul > li:first-child {
+	padding-left: 0
+}
+
+body > main {
+	padding: 1rem;
+}
+
+body > main * {
+	padding: 0.1em;
+}
