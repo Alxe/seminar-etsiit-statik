@@ -12,12 +12,14 @@
 <body>
 	<header>
 		<h1>{{ section_title }}</h1>
-		<ul>
-			<li><a href="{% url 'index' %}">Index</a></li>
-			<li><a href="{% url 'projects' %}">Projects</a></li>
-			<li><a href="{% url 'about' %}">About</a></li>
-			<li><a href="{% url 'contact' %}">Contact</a></li>
-		</ul>
+		<nav>
+			<ul>
+				<li><a href="{% url 'index' %}">Index</a></li>
+				<li><a href="{% url 'projects' %}">Projects</a></li>
+				<li><a href="{% url 'about' %}">About</a></li>
+				<li><a href="{% url 'contact' %}">Contact</a></li>
+			</ul>
+		</nav>
 	</header>
 
 	<hr />
