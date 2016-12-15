@@ -22,4 +22,4 @@ Enlaces de interés
 
 - [Página web de ejemplo de las diapositivas](https://alxe.github.io/seminar-etsiit-statik/example/)
 - [Estructura y diseño web (novatos, en inglés)](http://howtocodeinhtml.com/)
-- [Mozilla Developer Network, el santo grial del desarrollo web (en inglés, recomendado](https://developer.mozilla.org/en/docs/Web) [(ó en español)](https://developer.mozilla.org/es/docs/Web)
+- [Mozilla Developer Network, el santo grial del desarrollo web (en inglés, recomendado)](https://developer.mozilla.org/en/docs/Web) [(ó en español)](https://developer.mozilla.org/es/docs/Web)
