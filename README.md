@@ -12,6 +12,11 @@ Esta charla no tiene intención de hacerte un profesional en pocas horas, pero s
 
 El framework analizado en profundidad es [Statik](https://github.com/thanethomson/statik), se recomienda encarezidamente algún conocimiento de tecnologías web (HTML, CSS) y de Python, por muy mínimo que sea.
 
+Requisitos
+---
+
+No hay ningún requisito para seguir la charla, pero en las diapositivas se asume que tienes Statik instalado.
+
 Enlaces de interés
 ---
 
